@@ -30,6 +30,8 @@ function Signup() {
   const navigate = useNavigate();
 
   return (
+    <>
+   
     <section>
       <h1>Signup</h1>
 
@@ -55,6 +57,7 @@ function Signup() {
       <p>Already have an account?</p>
       <Link to="/login">Login</Link>
     </section>
+    </>
   );
 }
 
