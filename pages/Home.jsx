@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-  const [radios, setRadios] = useState([])
+/*   const [radios, setRadios] = useState([])
 
   const getRadios = async() => {
     try {
@@ -37,7 +37,7 @@ function Home() {
       )
     })}
     </div>
-  );
+  ); */
 }
 
 export default Home

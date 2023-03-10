@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/explore/" element={<Explore />} />
         <Route path="/explore/:id" element={<RadioDetails />} />
-        <Route path="/explore/popular" element={<RadiosRanked />} />
+        <Route path="/radios/ranked" element={<RadiosRanked />} />
         <Route path="/explore/:genre" element={<RadiosGenre />} />
         <Route path="/explore/:country" element={<RadiosCountry />} />
         <Route path="/signup" element={<Signup />} />

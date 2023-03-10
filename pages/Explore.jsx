@@ -6,9 +6,10 @@ import RadiosCountry from './RadiosCountry';
 import RadiosGenre from './RadiosGenre';
 import RadiosRanked from './RadiosRanked';
 
+
+/*  const getRadios = async () => {
  const [radios, setRadios] = useState([]);
 
- const getRadios = async () => {
    try {
      const response = await radioService.GetRadios();
      console.log(response.data);
@@ -20,17 +21,17 @@ import RadiosRanked from './RadiosRanked';
    useEffect(() => {
      getRadios;
    }, []);
- };
+ }; */
 
 
 function Explore() {
-  return (
+/*   return (
     <>
       <Link to={`/explore/${radios.country}`}> Search the radio by country</Link>
       <Link to={`/explore/${radios.genre}`}> Choose the genre</Link>
       <Link to={`/explore/${radios.ranking}`}> The top listened radios </Link>
     </>
-  );
+  ); */
 }
 
 export default Explore
