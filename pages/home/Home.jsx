@@ -36,12 +36,18 @@ function Home() {
       </div>
 
       <section>
+
+        
         <div className="card-container">
           <div className="card">
 
             <h2>Card title</h2>
             <p>Card description</p>
           </div>
+
+
+
+
           <div className="card">
 
             <h2>Card title</h2>

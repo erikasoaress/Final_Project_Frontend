@@ -52,24 +52,27 @@
     }
 }
 
- /* Searchbar styles */
+.search-bar {
+    position: relative;
+    display: inline-block;
 
-.main {
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-h1 {
-    margin: 10px;
-    font-size: 40px;
-    color: rgb(1, 1, 59);
-}
-
-.search {
-    width: 30%;
-}
+  }
+  
+  input[type="text"] {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  
+  button.search-button {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .search-bar:focus-within input[type="text"] {
+    display: block;
+  }
   

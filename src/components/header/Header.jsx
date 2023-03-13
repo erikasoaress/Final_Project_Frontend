@@ -3,20 +3,30 @@ import { Link } from "react-router-dom";
 import { AuthContext } from '../../../context/auth.context'
 import "../../App.css";
 import "./header.css"
+import "../../styles/sass.scss"
 
 
 function Header() {
   const { loggedIn, user, logout } = useContext(AuthContext);
 
+  
+
   return (
+
+
     <nav className="header">
-      
+      <div class="search-bar">
+        <input type="text" placeholder="Search"/>
+          <button class="search-button">Search</button>
+      </div>
+
       <Link className="navbar-link" to="/"> Home </Link>
 
-  
+
       {loggedIn ? (
         <>
-          <span>Hello {user.name}</span>
+          <span className="navbar-link">Hello {user.name}</span>
+
           <Link className="navbar-link" to="/explore"> Explore </Link>
           <button onClick={logout}>Logout</button>
         </>
@@ -32,7 +42,7 @@ function Header() {
         </>
       )}
 
-  
+
     </nav>
   );
 }

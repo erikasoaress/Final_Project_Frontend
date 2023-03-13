@@ -36,9 +36,9 @@ function Signup() {
       <div className="door-wrapper">
         <img className="door" src="/door.png" />
 
-        <form className="login-signup-forms" onSubmit={handleSubmit}>
+        <form className="login-signup-forms form" onSubmit={handleSubmit}>
           <h2>Signup</h2>
-          <label htmlFor="name"> Name</label>
+          <label htmlFor="name"> Name:</label>
           <input
             type="text"
             name="name"
@@ -69,7 +69,7 @@ function Signup() {
 
           <p>Already have an account?</p>
         </form>
-        <Link to="/login">Login</Link>
+        <Link className="form" to="/login">Login</Link>
 
       
       </div>
