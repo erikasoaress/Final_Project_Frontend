@@ -31,10 +31,10 @@ function Signup() {
 
   return (
     <>
-      <section className="login-signup-forms">
+      <section>
         <h1>Signup</h1>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="login-signup-forms">
           <label htmlFor="name"> Name</label>
           <input
             type="text"
