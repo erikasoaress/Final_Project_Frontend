@@ -36,8 +36,8 @@ function Home() {
       </div>
 
       <section>
-        <div class="card-container">
-          <div class="card">
+        <div className="card-container">
+          <div className="card">
 
             <h2>Card title</h2>
             <p>Card description</p>
@@ -47,25 +47,25 @@ function Home() {
             <h2>Card title</h2>
             <p>Card description</p>
           </div>
-          <div class="card">
+          <div className="card">
 
             <h2>Card title</h2>
             <p>Card description</p>
           </div>
 
-          <div class="card">
+          <div className="card">
 
             <h2>Card title</h2>
             <p>Card description</p>
           </div>
 
-          <div class="card">
+          <div className="card">
 
             <h2>Card title</h2>
             <p>Card description</p>
           </div>
 
-          <div class="card">
+          <div className="card">
 
             <h2>Card title</h2>
             <p>Card description</p>

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/auth.context";
-import Navbar from "../src/components/header/Header";
+import "./Login.css"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -40,20 +40,21 @@ function Login() {
 
   return (
     <>
-          <section>
-        <h1>Login</h1>
 
-        <form onSubmit={handleSubmit}>
-          <label htmlFor="email"> Email</label>
+      <div className="door-wrapper">
+        <img className="door" src="/public/door.png" />
+
+        <form className="login-signup-forms" onSubmit={handleSubmit}>
+          <h2>Login</h2>
+          <label htmlFor="email">Email:</label>
           <input
             type="email"
             name="email"
             id="email"
             value={email}
-            onChange={handleEmail}
-          />
+            onChange={handleEmail} />
 
-          <label htmlFor="password"> Password</label>
+          <label htmlFor="password">Password:</label>
           <input
             type="password"
             name="password"
@@ -63,11 +64,17 @@ function Login() {
           />
 
           <button type="submit">Login</button>
-        </form>
 
-        <p>Don't have an account?</p>
-        <Link to="/signup">Signup</Link>
-      </section>
+          <p>Don't have an account?</p>
+
+          <Link to="/signup">Signup</Link>
+
+        </form>
+      
+      </div>
+
+
+
     </>
   );
 }
