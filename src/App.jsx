@@ -24,7 +24,7 @@ function App() {
       <div className="app-content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/explore/" element={<Explore />} />
+          <Route path="/explore" element={<Explore />} />
           <Route path="/explore/:id" element={<RadioDetails />} />
           <Route path="/radios/ranked" element={<RadiosRanked />} />
           <Route path="/explore/:genre" element={<RadiosGenre />} />
