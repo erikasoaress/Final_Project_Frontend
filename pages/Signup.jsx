@@ -31,32 +31,43 @@ function Signup() {
 
   return (
     <>
-   
-    <section>
-      <h1>Signup</h1>
+      <section className="login-signup-forms">
+        <h1>Signup</h1>
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name"> Name</label>
-        <input type="text" name="name" id="name" value={name} onChange={handleName} />
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name"> Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            onChange={handleName}
+          />
 
-        <label htmlFor="email"> Email</label>
-        <input type="email" name="email" id="email" value={email} onChange={handleEmail} />
+          <label htmlFor="email"> Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={email}
+            onChange={handleEmail}
+          />
 
-        <label htmlFor="password"> Password</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          value={password}
-          onChange={handlePassword}
-        />
+          <label htmlFor="password"> Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value={password}
+            onChange={handlePassword}
+          />
 
-        <button type="submit">Create account</button>
-      </form>
+          <button type="submit">Create account</button>
+        </form>
 
-      <p>Already have an account?</p>
-      <Link to="/login">Login</Link>
-    </section>
+        <p>Already have an account?</p>
+        <Link to="/login">Login</Link>
+      </section>
     </>
   );
 }
