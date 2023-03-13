@@ -10,26 +10,29 @@ function Header() {
 
   return (
     <nav className="header">
-      <div >
       
-      
-      </div>
       <Link className="navbar-link" to="/"> Home </Link>
+
+  
       {loggedIn ? (
         <>
-           {/* <span>Hello {user.name}</span> */}
-          <Link className="navbar-link"  to="/explore"> Explore </Link>
-          <button onClick={logout}>Logout</button> 
-         ´
+          <span>Hello {user.name}</span>
+          <Link className="navbar-link" to="/explore"> Explore </Link>
+          <button onClick={logout}>Logout</button>
         </>
       ) : (
         <>
-           <Link className="navbar-link"  to="/signup"> Signup </Link>
-          <Link className="navbar-link"  to="/login"> Login </Link> 
-          
+          <Link className="navbar-link" to="/signup"> Signup </Link>
+          <Link className="navbar-link" to="/login"> Login </Link>
+
+
           <h1 className="radio-title">RADIO WONDERS</h1>
+
+
         </>
       )}
+
+  
     </nav>
   );
 }

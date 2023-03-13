@@ -22,11 +22,11 @@ function Explore() {
     }, []);
   };
   return (
-    <div className="ExploreCards">
-      <Link to={`/explore/${radios.country}`}> Search the radio by country</Link>
-      <Link to={`/explore/${radios.genre}`}> Choose the genre</Link>
-      <Link to={`/explore/${radios.ranking}`}> The top listened radios </Link>
-    </div>
+    <>
+    <Link to={`/explore/${radios.country}`}> Search the radio by country</Link>
+    <Link to={`/explore/${radios.genre}`}> Choose the genre</Link>
+    <Link to={`/explore/${radios.ranking}`}> The top listened radios </Link>
+  </>
   );
 }
 
