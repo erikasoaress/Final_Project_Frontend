@@ -65,11 +65,11 @@ function Signup() {
             onChange={handlePassword}
           />
 
-          <Link className="button-forms" to="/"><img src="/button.png" /></Link>
+          <button type="submit" className="button-forms"><img src="/button.png" /></button>
 
           <p>Already have an account?</p>
-        <Link to="/login">Login</Link>
         </form>
+        <Link to="/login">Login</Link>
 
       
       </div>

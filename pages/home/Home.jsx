@@ -42,7 +42,7 @@ function Home() {
             <h2>Card title</h2>
             <p>Card description</p>
           </div>
-          <div class="card">
+          <div className="card">
 
             <h2>Card title</h2>
             <p>Card description</p>

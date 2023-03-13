@@ -13,6 +13,7 @@ function Login() {
 
   const { authenticateUser } = useContext(AuthContext);
 
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,7 +26,8 @@ function Login() {
         }
       );
 
-      localStorage.setItem("authToken", response.data.authToken);
+      console.log(response.data)
+        localStorage.setItem("authToken", response.data.authToken);
 
       authenticateUser();
 
@@ -36,7 +38,7 @@ function Login() {
     }
   };
 
-  const navigate = useNavigate();
+ 
 
   return (
     <>
@@ -63,14 +65,13 @@ function Login() {
             onChange={handlePassword}
           />
 
-          <Link className="button-forms"to="/"><img src="/button.png"/></Link>
+          <button type='submit' className="button-forms"><img src="/button.png"/></button>
 
           <p>Don't have an account?</p>
 
-          <Link to="/signup">Signup</Link>
-
         </form>
-        
+           <Link to="/signup">Signup</Link>
+
       </div>
 
 
