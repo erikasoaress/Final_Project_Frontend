@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/auth.context";
-import "./Login.css"
+import { AuthContext } from "../../context/auth.context";
+import "./Form.css"
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -42,7 +42,7 @@ function Login() {
     <>
 
       <div className="door-wrapper">
-        <img className="door" src="/public/door.png" />
+        <img className="door" src="/door.png" />
 
         <form className="login-signup-forms" onSubmit={handleSubmit}>
           <h2>Login</h2>
@@ -63,14 +63,14 @@ function Login() {
             onChange={handlePassword}
           />
 
-          <button type="submit">Login</button>
+          <Link className="button-forms"to="/"><img src="/button.png"/></Link>
 
           <p>Don't have an account?</p>
 
           <Link to="/signup">Signup</Link>
 
         </form>
-      
+        
       </div>
 
 

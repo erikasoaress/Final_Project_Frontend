@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import "./Form.css"
 
 function Signup() {
   const [name, setName] = useState('');
@@ -31,10 +32,12 @@ function Signup() {
 
   return (
     <>
-      <section>
-        <h1>Signup</h1>
 
-        <form onSubmit={handleSubmit} className="login-signup-forms">
+      <div className="door-wrapper">
+        <img className="door" src="/door.png" />
+
+        <form className="login-signup-forms" onSubmit={handleSubmit}>
+          <h2>Signup</h2>
           <label htmlFor="name"> Name</label>
           <input
             type="text"
@@ -62,12 +65,16 @@ function Signup() {
             onChange={handlePassword}
           />
 
-          <button type="submit">Create account</button>
+          <Link className="button-forms" to="/"><img src="/button.png" /></Link>
+
+          <p>Already have an account?</p>
+        <Link to="/login">Login</Link>
         </form>
 
-        <p>Already have an account?</p>
-        <Link to="/login">Login</Link>
-      </section>
+      
+      </div>
+
+
     </>
   );
 }
