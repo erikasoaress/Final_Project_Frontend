@@ -1,11 +1,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-<<<<<<< HEAD:pages/Login.jsx
 import { AuthContext } from "../context/auth.context";
-=======
-import { AuthContext } from "../../context/auth.context";
->>>>>>> 40c6af5a265cf86e98dfa42c9052f2c8144e478c:pages/access/Login.jsx
 import "./Form.css"
 
 function Login() {

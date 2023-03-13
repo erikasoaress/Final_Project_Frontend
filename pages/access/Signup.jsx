@@ -1,12 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
-<<<<<<< HEAD:pages/Signup.jsx
-import "./Form.css";
-
-=======
 import "./Form.css"
->>>>>>> 40c6af5a265cf86e98dfa42c9052f2c8144e478c:pages/access/Signup.jsx
 
 function Signup() {
   const [name, setName] = useState('');
