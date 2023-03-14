@@ -7,7 +7,6 @@ import Login from "../pages/access/Login";
 import Explore from "../pages/explore/Explore"
 import Home from "../pages/home/Home";
 import Profile from "../pages/Profile";
-import EditProfile from "../pages/EditProfile";
 import RadioDetails from "../pages/RadioDetails";
 import RadiosCountry from "../pages/RadiosCountry";
 import RadiosGenre from "../pages/RadiosGenre";
@@ -25,13 +24,9 @@ function App() {
 
   return (
     <div className="app">
-      <Header/>
+      <Header />
 
-      {
-        isPlaying && (
-          <Player/>
-        )
-      }
+      {isPlaying && <Player />}
 
       <div className="app-content">
         <Routes>
@@ -41,11 +36,10 @@ function App() {
           <Route path="/explore/:id" element={<RadioDetails />} />
           <Route path="/explore/:genre" element={<RadiosGenre />} />
           <Route path="/explore/:country" element={<RadiosCountry />} />
+          <Route path="/radio/:id" element={<RadioDetails />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/profile/:id" element={<Profile />} />
-          <Route path="/profile/edit/:id" element={<EditProfile />} />
-          
+          <Route path="/profile/:_id" element={<Profile />} />
         </Routes>
       </div>
     </div>
