@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from '../../../context/auth.context'
 import "../../App.css";
 import "./header.css"
+import "../../styles/stylesheet.css";
 
 
 function Header() {
@@ -16,9 +17,8 @@ function Header() {
   
       {loggedIn ? (
         <>
-          <span>Hello {user.name}</span>
           <Link className="navbar-link" to="/explore"> Explore </Link>
-          <button onClick={logout}>Logout</button>
+          <button onClick={logout} className="button">Logout</button>
         </>
       ) : (
         <>

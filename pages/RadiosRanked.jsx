@@ -11,7 +11,7 @@ function RadiosRanked() {
         `${import.meta.env.VITE_API_URL}/api/radios/ranked`
       );
       setRadiosRanked(response.data);
-      console.log(response.data)
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -19,14 +19,27 @@ function RadiosRanked() {
 
   useEffect(() => {
     getRankedRadios();
+    console.log("a");
   }, []);
 
-   radiosRanked.map((radio) => {
-    return (
-    <div key={radio._id}>
-      <p>{radio.country}</p>
-    </div>)
-});
+  useEffect(() => {
+    console.log("hi", radiosRanked);
+  }, [radiosRanked]);
+
+  return (
+    <div>
+
+      {radiosRanked.map((radio) => {
+        return(
+          <div className="radio-wrapper">
+          <h3>{radio.country}</h3>
+          <h1>{radio.name}</h1>
+          <img src={`${radio.favicon}`} alt="radio symbol" style={{width: "250px"}}/>
+        </div>
+          )
+      })}
+    </div>
+  );
 }
 
 export default RadiosRanked;

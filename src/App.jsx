@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import {Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "/src/components/header/Header.jsx";
 import Signup from "../pages/access/Signup";
 import Login from "../pages/access/Login";
@@ -25,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/explore" element={<Explore />} />
+          <Route exact path="/explore/popular" element={<RadiosRanked />} />
           <Route path="/explore/:id" element={<RadioDetails />} />
-          <Route path="/radios/ranked" element={<RadiosRanked />} />
           <Route path="/explore/:genre" element={<RadiosGenre />} />
           <Route path="/explore/:country" element={<RadiosCountry />} />
           <Route path="/signup" element={<Signup />} />
