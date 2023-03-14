@@ -47,7 +47,6 @@ function Explore() {
         <div className="card">
           <h1>Genre</h1>
         </div>
-
         <div className="form-container">
           <form className="form">
             <input
