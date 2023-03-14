@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./explore.css";
 import SearchBar from "../../src/components/searchbar/SearchBar";
+import SearchBarGenre from "../../src/components/searchbar/SearchBarGenre";
 import radioService from "../../src/services/radio.service";
 
 function Explore() {
@@ -43,6 +44,22 @@ function Explore() {
     searchCountry();
   }, [country]);
 
+
+  const searchGenre = async () => {
+    try {
+      const filteredRadios = radios.filter((radio) =>
+        radio.genre.toLowerCase().startsWith(genre.toLowerCase())
+      );
+      setSearchRadios(filteredRadios);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    searchGenre();
+  }, [genre]);
+
   return (
     <div className="card-wrapper">
       <div className="card-container">
@@ -55,9 +72,9 @@ function Explore() {
       <div className="card-container">
         <div className="card">
           <h1>Genre</h1>
-          <SearchBar />
+          {<SearchBarGenre setGenre={setGenre} />}
         </div>
-        {/*  <SearchBar setGenre={setGenre} /> */}
+        
       </div>
 
       <div className="card-container">
@@ -70,7 +87,7 @@ function Explore() {
           searchRadios.map((radio) => {
             return (
              <Link to={`/radio/${radio._id}`}>
-               <h1>{radio.name}</h1>;
+               <h1>{radio.name}</h1>
              </Link>
           )})}
       </div>
