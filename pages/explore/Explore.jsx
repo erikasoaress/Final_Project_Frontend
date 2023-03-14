@@ -67,10 +67,10 @@ function Explore() {
         {searchRadios.length &&
           searchRadios.map((radio) => {
             return (
-             <Link to={`/radio/${radio._id}`}>
-               <h1>{radio.name}</h1>;
-             </Link>
-          )})}
+              <Link to={`/radio/${radio.stationuuid}`}>
+                <h1>{radio.name}</h1>;
+              </Link>
+            );})}
       </div>
     </div>
   );

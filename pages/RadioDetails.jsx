@@ -6,10 +6,11 @@ import { Link, useParams } from "react-router-dom";
 function RadioDetails(){
     const [radioDetails, setRadioDetails] = useState([]);
 
-    const {radioId} = useParams();
+    const {id} = useParams();
 
     const getRadioDetails = async () => {
       try {
+        
         
       } catch (error) {
         console.log(error)
