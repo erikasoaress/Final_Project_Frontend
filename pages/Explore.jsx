@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import "./explore.css";
 
-
 function Explore() {
   const [radios, setRadios] = useState([]);
 
@@ -43,7 +42,7 @@ function Explore() {
 
       <div className="card-container">
         <div className="card">
-          <h1>Genre</h1> 
+          <h1>Genre</h1>
         </div>
         <div className="form-container">
           <form className="form">
