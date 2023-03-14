@@ -2,57 +2,128 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 
 .header {
-    
-    background-color:#000000;
-    height: 100px;
-    width: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-   
-    
+  background-color:#000000;
+  height: 100px;
+  width: 100%;
+
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.radio-title {
+  text-decoration: none;
+}
+  
+.radio-title h1 {
+  color:#ffff00;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: auto;
+
+  font-size: 2rem;
+  letter-spacing: 3px;
+  font-family: 'Fascinate';
+  
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #ffff00;
+  margin-right: 24px;
+  margin-left: 24px;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+}
+
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  color:orange;
+  background-color: rgb(236, 210, 6);
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar-link:hover::before {
+  width: 100%;
+}
+
+
+.search-bar {
+  display: flex;
+  align-items: center;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.rounded-input {
+  padding: 0;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  margin-right: 10px;
+  width: 250px;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  
+  display: flex;
+  align-items: center;
+}
+
+.magnifyingglass {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .rounded-input {
+    font-size: 14px;
   }
   
-  .radio-title {
-    color:#ffff00;
-    display: flex;
-    align-items: center;
-    /* margin-right: auto; */
-    /* margin-left: 20px; */
-    font-size: 2.5rem;
-    letter-spacing: 3px;
-    /* padding:30px; */
-    font-family: 'Fascinate';
-   
+  .magnifyingglass {
+    width: 16px;
+    height: 16px;
   }
-
-  .navbar-link {
-    text-decoration: none;
-    color: #ffff00;
-    margin-right: 24px;
-    margin-left: 24px;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-  }
-
+}
 
 
 /* Apply styles for screens smaller than 768px */
-@media only screen and (max-width: 768px) {
+ @media only screen and (max-width: 768px) {
     .navbar {
         height: 50px;
     }
 }
 
 /* Apply styles for screens larger than 768px */
-@media only screen and (min-width: 768px) {
+ @media only screen and (min-width: 768px) {
     .navbar {
         height: 100px;
     }
-}
+}  
 
-.search-bar {
+/* Dont remove this comments */
+
+
+/* .search-bar {
     position: relative;
     display: inline-block;
 
@@ -61,7 +132,7 @@
   input[type="text"] {
     color: black;
     font-family: 'Roboto', sans-serif;
-    display: none;
+    
     position: absolute;
     top: 100%;
     left: 0;
@@ -75,4 +146,4 @@
   .search-bar:focus-within input[type="text"] {
     display: block;
   }
-  
+   */

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/auth.context";
+import { AuthContext } from "../../src/context/auth.context";
 import "./Form.css"
 
 function Login() {
@@ -65,12 +65,19 @@ function Login() {
             onChange={handlePassword}
           />
 
-          <button type='submit' className="button-forms"><img src="/button.png"/></button>
+<button className="button-forms" onClick={handleSubmit}>
+  <img src="/button.png" alt="Submit" />
+</button>
 
-          <p>Don't have an account?</p>
+         
+        <div className="form-wrapper">
+
+      <p>Don´t have an account? 
+        <Link className="form" to="/signup">Signup</Link></p>
+    </div>
 
         </form>
-           <Link to="/signup">Signup</Link>
+        
 
       </div>
 
