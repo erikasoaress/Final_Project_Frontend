@@ -18,8 +18,8 @@
 }
 
 .musicbox {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -29,8 +29,8 @@
 
 .circle {
    
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
     animation: spin 2s linear infinite;

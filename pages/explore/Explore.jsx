@@ -55,13 +55,15 @@ function Explore() {
       <div className="card-container">
         <div className="card">
           <h1>Genre</h1>
+          <SearchBar />
         </div>
         {/*  <SearchBar setGenre={setGenre} /> */}
       </div>
 
       <div className="card-container">
         <div className="card">
-          <Link to={`/explore/popular`}>Popular</Link>
+          <h1>Popular</h1>
+          <Link to={`/explore/popular`}>Check here</Link>
         </div>
 
         {searchRadios.length &&
@@ -73,6 +75,7 @@ function Explore() {
             );})}
       </div>
     </div>
+
   );
 }
 
