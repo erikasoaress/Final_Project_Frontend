@@ -13,7 +13,7 @@ function Player() {
           className="player-radio-image"
           style={
             {
-              backgroundImage: `url(${radio.image})`
+              backgroundImage: `url(${radio.favicon})`
             }
           }
         />

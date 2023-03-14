@@ -5,6 +5,8 @@ import "./explore.css";
 import SearchBar from "../../src/components/searchbar/SearchBar";
 import SearchBarGenre from "../../src/components/searchbar/SearchBarGenre";
 import radioService from "../../src/services/radio.service";
+import RadioCards from "../../src/components/radio-cards/RadioCards";
+
 
 function Explore() {
   const [radios, setRadios] = useState([]);
@@ -28,6 +30,7 @@ function Explore() {
   useEffect(() => {
     getRadios();
   }, []);
+
 
   const searchCountry = async () => {
     try {
@@ -74,7 +77,7 @@ function Explore() {
           <h1>Genre</h1>
           {<SearchBarGenre setGenre={setGenre} />}
         </div>
-        
+
       </div>
 
       <div className="card-container">
@@ -86,21 +89,20 @@ function Explore() {
         {searchRadios.length &&
           searchRadios.map((radio) => {
             return (
-<<<<<<< HEAD
-              <Link to={`/radio/${radio._id}`}>
-                <h1>{radio.name}</h1>;
-              </Link>
+              <div>
+                <Link to={`/radio/${radio._id}`}>
+                  {/* <h1>{radio.name}</h1> */}
+                 See details
+                </Link>
+              <RadioCards radio={radio} />
+                
+                </div>
             );
           })}
-=======
-             <Link to={`/radio/${radio._id}`}>
-               <h1>{radio.name}</h1>
-             </Link>
-          )})}
->>>>>>> bc4d981be0c98dc9241f8e3a3f5ee274772f834c
       </div>
     </div>
   );
 }
 
 export default Explore;
+

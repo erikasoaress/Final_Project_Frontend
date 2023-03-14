@@ -44,7 +44,7 @@ function Home() {
             radios.map((radio) => (
               <div 
                 className="card"
-                onClick={() => play(radio.name, radio.url, radio.favicon)}
+                onClick={() => play(radio.name, radio.homepage, radio.favicon)}
               >
                 <h2>{radio.name}</h2>
               </div>
