@@ -2,56 +2,69 @@
 
 
 .door-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-  }
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
 
-  .door {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    
-  }
+.door {
+  display: block;
+  max-width: 100%;
+  height: auto;
 
-  form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-  }
+}
 
-  .login-signup-forms {
-    color:#fffb00;
-    font-family:'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 1;
-    width: 40%;
-  }
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
 
-  .login-signup-forms label {
-   margin-bottom: 10px;;
+.login-signup-forms {
+  color: #fffb00;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+  width: 40%;
+}
 
-  } 
+.login-signup-forms label {
+  margin-bottom: 10px;
+  ;
 
-   .login-signup-forms button {
-    width:30%;
-    display: flex;
-    align-items: center;
-  } 
+}
 
- 
-  .button-forms img {
-   width: 30%;
-   margin-top: 20px;
-   animation: spin 4s linear infinite;
-  }
+ .login-signup-forms button {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* background-color: transparent;
+  border: none; */
+
+}
+
+.login-signup-forms input[type="email"],
+.login-signup-forms input[type="password"] {
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+}
 
 
+
+.button-forms img {
+
+  width: 60%;
+  margin-top: 20px;
+  animation: spin 4s linear infinite;
+}

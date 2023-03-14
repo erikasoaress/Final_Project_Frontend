@@ -38,7 +38,8 @@ function Signup() {
 
         <form className="login-signup-forms" onSubmit={handleSubmit}>
           <h2>Signup</h2>
-          <label htmlFor="name"> Name</label>
+
+          <label htmlFor="name"> Name:</label>
           <input
             type="text"
             name="name"
@@ -65,11 +66,17 @@ function Signup() {
             onChange={handlePassword}
           />
 
-          <button type="submit" className="button-forms"><img src="/button.png" /></button>
+<button className="button-forms" onClick={handleSubmit}>Signup
+  {/* <img src="/button.png" alt="Submit" /> */}
+</button>
 
-          <p>Already have an account?</p>
-        </form>
-        <Link to="/login">Login</Link>
+ <div className="form-wrapper">
+
+      <p>Already have an account? 
+        <Link className="form" to="/login">Login</Link></p>
+    </div>
+  </form>
+        
 
       
       </div>

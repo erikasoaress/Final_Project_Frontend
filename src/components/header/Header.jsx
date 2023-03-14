@@ -1,39 +1,48 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from '../../../context/auth.context'
+import { AuthContext } from '../../context/auth.context'
 import "../../App.css";
 import "./header.css"
 import "../../styles/stylesheet.css";
 
 
+
 function Header() {
   const { loggedIn, user, logout } = useContext(AuthContext);
 
+
+
   return (
-    <nav className="header">
-      
-      <Link className="navbar-link" to="/"> Home </Link>
+    <header className="header">
 
-  
-      {loggedIn ? (
-        <>
-          <Link className="navbar-link" to="/explore"> Explore </Link>
-          <button onClick={logout} className="button">Logout</button>
-        </>
-      ) : (
-        <>
-          <Link className="navbar-link" to="/signup"> Signup </Link>
-          <Link className="navbar-link" to="/login"> Login </Link>
+      <Link className="radio-title" to="/">
+        <h1>RADIO WONDERS</h1>
+      </Link>
+
+      <div className="search-bar">
+        <input type="text" placeholder="Search" className="rounded-input" />
+        <button type="submit" className="search-button">
+          <img className="magnifyingglass"src="/public/magnifyingglass.png"/>
+        </button>
+      </div>
 
 
-          <h1 className="radio-title">RADIO WONDERS</h1>
+      <nav>
+        {loggedIn ? (
+          <>
+            <Link className="navbar-link" to="/explore"> Explore </Link>
+            <span className="navbar-link">Hello, {user.name}</span>
+            <button className="navbar-link logout" onClick={logout}>Logout</button>
+          </>
+        ) : (
+          <>
+            <Link className="navbar-link" to="/signup"> Signup </Link>
+            <Link className="navbar-link" to="/login"> Login </Link>
+          </>
+        )}
+      </nav>
 
-
-        </>
-      )}
-
-  
-    </nav>
+    </header>
   );
 }
 

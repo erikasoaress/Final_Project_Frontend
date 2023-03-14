@@ -1,5 +1,3 @@
-/* Homepage styles */
-
 html,
 body {
   height: 100%;
@@ -29,4 +27,29 @@ body {
 .app-content {
   flex-grow: 1;
 }
+
+
+
+/* Apply styles for screens smaller than 768px */
+
+/* @media only screen and (max-width: 768px) {
+  .header {
+    height: 50px;
+  }
+  
+ 
+}
+
+/* Apply styles for screens larger than 768px */
+/* @media only screen and (min-width: 768px) {
+  .header {
+    height: 100px;
+  }
+  
+
+} 
+  */
+
+
+
 

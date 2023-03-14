@@ -1,0 +1,42 @@
+.player {
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+
+    padding: 20px;
+
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+    background-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+}
+
+.player-radio-content {
+    margin-top: 16px;
+}
+
+.player-radio-image {
+    width: 128px;
+    height: 128px;
+
+    background-image: red;
+}
+
+.player-radio-title,
+.player-radio-description {
+    max-width: 128px;
+    margin: 0;
+}
+
+.player-radio-title {
+    margin-bottom: 16px;
+}
+
+.player-radio-description {
+    max-width: 128px;
+}
+
+.player-radio-controls audio {
+    max-width: 128px;
+}
