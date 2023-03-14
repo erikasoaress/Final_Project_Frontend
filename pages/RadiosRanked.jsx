@@ -1,6 +1,9 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import ".././src/components/radio-cards/radio-cards.css"
+import RadioCards from "../src/components/radio-cards/RadioCards";
+
 
 function RadiosRanked() {
   const [radiosRanked, setRadiosRanked] = useState([]);
@@ -27,19 +30,20 @@ function RadiosRanked() {
   }, [radiosRanked]);
 
   return (
-    <div>
 
-      {radiosRanked.map((radio) => {
-        return(
-          <div className="radio-wrapper">
-          <h3>{radio.country}</h3>
-          <h1>{radio.name}</h1>
-          <img src={`${radio.favicon}`} alt="radio symbol" style={{width: "250px"}}/>
-        </div>
-          )
-      })}
-    </div>
-  );
+    <div>  
+        {radiosRanked.length && radiosRanked.map((radio) => {
+      return(<RadioCards radio={radio}/>)})
+    }
+</div>
+
+  )
 }
 
 export default RadiosRanked;
+
+        //   <div className="radio-wrapper">
+        //   <h3>{radio.country}</h3>
+        //   <h3>{radio.country}</h3>
+        //   <img src={`${radio.favicon}`} alt="radio symbol" style={{width: "250px"}}/>
+        // </div>

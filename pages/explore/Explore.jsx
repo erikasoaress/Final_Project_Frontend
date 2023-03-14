@@ -28,28 +28,30 @@ function Explore() {
       <div className="card-container">
         <div className="card">
           <h1>Country</h1>
-        <SearchBar/>
+          <SearchBar />
         </div>
       </div>
 
       <div className="card-container">
         <div className="card">
           <h1>Genre</h1>
+          <SearchBar />
         </div>
-        <SearchBar/>
+     
       </div>
 
       <div className="card-container">
         <div className="card">
-          <Link to={`/explore/popular`}>Popular</Link>
+          <h1>Popular</h1>
+          <Link to={`/explore/popular`}>Check here</Link>
         </div>
-       
-       
-
-
 
       </div>
+
+
+
     </div>
+
   );
 }
 

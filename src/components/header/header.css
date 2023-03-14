@@ -22,9 +22,9 @@
   color:#ffff00;
   display: flex;
   align-items: center;
-  margin: 0;
+  /* margin: 0; */
   margin-right: auto;
-
+  padding-left: 24px;
   font-size: 2rem;
   letter-spacing: 3px;
   font-family: 'Fascinate';

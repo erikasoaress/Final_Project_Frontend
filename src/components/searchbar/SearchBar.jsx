@@ -3,9 +3,6 @@ import "./SearchBar.css"
 import React, { useContext } from "react";
 
 
-
-
-
 function SearchBar() {
 
 
