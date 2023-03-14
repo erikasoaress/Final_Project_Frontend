@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "/src/components/header/Header.jsx";
 import Signup from "../pages/access/Signup";
 import Login from "../pages/access/Login";
-import Explore from "../pages/Explore/Explore";
+import Explore from "../pages/explore/Explore"
 import Home from "../pages/home/Home";
 import Profile from "../pages/Profile";
 import EditProfile from "../pages/EditProfile";
