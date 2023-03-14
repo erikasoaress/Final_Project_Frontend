@@ -14,6 +14,7 @@ import RadiosGenre from "../pages/RadiosGenre";
 import RadiosRanked from "../pages/RadiosRanked";
 import Player from "./components/player/Player";
 
+
 import { PlayerContext } from "./context/player.context";
 
 import "./App.css";
@@ -43,6 +44,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/profile/edit/:id" element={<EditProfile />} />
+          
         </Routes>
       </div>
     </div>

@@ -92,6 +92,7 @@
   width: 18px;
   height: 18px;
   object-fit: contain;
+  color: #000000;
 }
 
 @media (max-width: 600px) {

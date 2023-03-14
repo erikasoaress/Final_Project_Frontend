@@ -4,6 +4,8 @@ import { AuthContext } from '../../context/auth.context'
 import "../../App.css";
 import "./header.css"
 import "../../styles/stylesheet.css";
+import SearchBar from "../searchbar/SearchBar";
+
 
 
 
@@ -19,12 +21,7 @@ function Header() {
         <h1>RADIO WONDERS</h1>
       </Link>
 
-      <div className="search-bar">
-        <input type="text" placeholder="Search" className="rounded-input" />
-        <button type="submit" className="search-button">
-          <img className="magnifyingglass"src="/public/magnifyingglass.png"/>
-        </button>
-      </div>
+    <SearchBar/>
 
 
       <nav>
