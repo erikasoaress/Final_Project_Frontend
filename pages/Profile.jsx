@@ -8,7 +8,6 @@ function Profile() {
     <div>
       <h1>Hello {user.name}</h1>
       
-
       
     
 
