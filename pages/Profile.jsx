@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../src/context/auth.context";
-/* import "./profile.css"; */
+import "./profile.css";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Home

@@ -15,7 +15,7 @@ function SearchbarHeader() {
   const searchHeader = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/radio/all-stations`
+        `http://de1.api.radio-browser.info/json/stations?limit=50/search?q=${search}`
       );
       setStations(response.data);
       console.log("a", response.data);
@@ -35,23 +35,11 @@ function SearchbarHeader() {
 
   return (
     <div className="search-bar">
-      <label htmlFor="search">Search:</label>
-      <input type="text" value={search} onChange={handleSearch} />
-
-      {/* <form
-        onSubmit={() => {
-          handleSubmit();
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Search Radios"
-          className="rounded-input"
-        />
-        <button type="submit" className="search-button">
-          <img className="magnifyingglass" src="/public/magnifyingglass.png" />
-        </button>
-      </form> */}
+      <label htmlFor="search"></label>
+      <input type="text" placeholder="Search" value={search} onChange={handleSearch} className="rounded-input" />
+       <button type="submit" className="search-button">
+        <img className="magnifyingglass" src="/public/magnifyingglass.png" />
+      </button>
     </div>
   );
 }
