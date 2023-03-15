@@ -11,6 +11,7 @@ import Profile from "../pages/Profile";
 import RadioDetails from "../pages/RadioDetails";
 import RadiosCountry from "../pages/RadiosCountry";
 import RadiosGenre from "../pages/RadiosGenre";
+import searchResults from "../pages/searchResults/searchResults";
 import RadiosRanked from "../pages/RadiosRanked";
 import Player from "./components/player/Player";
 import { PlayerContext } from "./context/player.context";
@@ -53,11 +54,12 @@ function App() {
           <Route exact path="/explore/popular" element={<RadiosRanked />} />
           <Route path="/explore/:id" element={<RadioDetails />} />
           <Route path="/explore/:genre" element={<RadiosGenre />} />
-          <Route path="/explore/:country" element={<RadiosCountry/>} />
-          <Route path="/radio/:id" element={<RadioDetails radios={radios}/>} />
+          <Route path="/explore/:country" element={<RadiosCountry />} />
+          <Route path="/radio/:id" element={<RadioDetails radios={radios} />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile/:_id" element={<Profile />} />
+          <Route path="/search" element={<searchResults />} />
         </Routes>
       </div>
     </div>

@@ -4,7 +4,7 @@ import { AuthContext } from '../../context/auth.context'
 import "../../App.css";
 import "./header.css"
 import "../../styles/stylesheet.css";
-import SearchBar from "../searchbar/SearchBar";
+import SearchBar from "../searchbar/SearchbarHeader";
 
 
 
@@ -32,7 +32,7 @@ function Header() {
             <Link className="navbar-link" to={`/profile/${user._id}`}>
               Hello, {user.name}
             </Link>
-            <button className="button" onClick={logout}>
+            <button onClick={logout} className="logout-button">
               Logout
             </button>
           </>

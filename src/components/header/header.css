@@ -78,7 +78,18 @@
   width: 250px;
 }
 
+.logout-button{
+  margin-right: 40px;
+  margin-left: 30px;
+  background-color: rgb(255, 255, 0);
+  border: 0;
+  border-radius: 6px;
+  height: 25px;
+  width: 80px;
+}
+
 .search-button {
+  margin-right: 30px;
   background-color: transparent;
   border: none;
   cursor: pointer;

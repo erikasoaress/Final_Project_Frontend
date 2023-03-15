@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import SearchBar from "../../src/components/searchbar/SearchBar";
-import SearchBarGenre from "../../src/components/searchbar/SearchBarGenre";
+import SearchBar from "../../src/components/searchbar/SearchBarCountry";
 import radioService from "../../src/services/radio.service";
 import RadioCards from "../../src/components/radio-cards/RadioCards";
 import "./explore.css";
@@ -24,8 +23,8 @@ const AVAILABLE_GENRES = [
 function Explore() {
   const [radios, setRadios] = useState([]);
   const [searchRadios, setSearchRadios] = useState([]);
-  // const [genre, setGenre] = useState("");
   const [country, setCountry] = useState("");
+  const [allStations, setAllStations] = useState("");
 
   const getRadios = async () => {
     try {
@@ -42,6 +41,21 @@ function Explore() {
   useEffect(() => {
     getRadios();
   }, []);
+
+    const searchAllStations = async () => {
+      try {
+        const filteredRadios = radios.filter((radio) =>
+          radio.allStations.toLowerCase().startsWith(allStations.toLowerCase())
+        );
+        setSearchRadios(filteredRadios);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+      useEffect(() => {
+        searchAllStations();
+      }, [allStations]);
 
 
   const searchCountry = async () => {
@@ -125,14 +139,7 @@ function Explore() {
           )}  
         </div>
 
-        {searchRadios.length &&
-          searchRadios.map((radio) => {
-            return (
-              <Link to={`/radio/${radio._id}`}>
-                <h1>{radio.name}</h1>
-              </Link>
-            )
-          })}
+              </section>
       </div>
  
   );

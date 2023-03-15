@@ -1,0 +1,31 @@
+*{
+font-family: "roboto";
+}
+
+.profileDiv{
+display: flex;
+flex-direction: column;
+    background-color: orange;
+height: 100%;
+width: 50%;
+}
+
+.profileForm{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 300px;
+    padding: 50px;
+    line-height: 40px;
+    padding-bottom: 50%;
+}
+
+.editProfileButton{
+    margin-top: 20px;
+    height: 30px;
+    background-color: antiquewhite;
+    border-radius: 12px;
+    border: 1cap;
+}
