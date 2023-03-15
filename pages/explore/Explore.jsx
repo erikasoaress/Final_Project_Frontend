@@ -140,7 +140,7 @@ function Explore() {
         <div className="explore-category">
           <div className="explore-category-info">
             <h1>Popular</h1>
-            <Link to={`/explore/popular`}>Check here</Link>
+            <Link className="popular-button"to={`/explore/popular`}>See Radios</Link>
           </div>
         </div>
 

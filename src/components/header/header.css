@@ -132,30 +132,3 @@
     }
 }  
 
-/* Dont remove this comments */
-
-
-/* .search-bar {
-    position: relative;
-    display: inline-block;
-
-  }
-  
-  input[type="text"] {
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-  
-  button.search-button {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .search-bar:focus-within input[type="text"] {
-    display: block;
-  }
-   */

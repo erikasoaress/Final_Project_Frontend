@@ -29,13 +29,17 @@ function RadioCards({radio}) {
                 ? "Unknown country"
                 : radio.country}
             </p>
-
-            {/* TODO put see radio info link */}
           </div>
         </Link>
         <button
           onClick={() =>
-            play(radio.name, radio.url, radio.favicon || radio.img)
+            play(
+              radio.name,
+              radio.url,
+              radio.favicon ||
+                radio.img ||
+              "/radio.jpg"
+            )
           }
           className="card-button"
         >

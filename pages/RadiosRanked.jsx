@@ -32,11 +32,11 @@ function RadiosRanked() {
 
   return (
 
-    <> 
+    <div className="popular-radios-wrapper"> 
         {radiosRanked.length && radiosRanked.map((radio) => {
       return(<RadioCards radio={radio}/>)})
     }
-</>
+</div>
 
   )
 }
