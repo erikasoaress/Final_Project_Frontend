@@ -26,6 +26,11 @@ class RadioService {
   getSingleRadio = (id) => {
     return this.api.get(`/api/radios/${id}`);
   };
+
+  addFavorite = (id) => {
+    console.log(id);
+    return this.api.put(`/api/favorites/${id}`);
+  };
 }
 const radioService = new RadioService();
 

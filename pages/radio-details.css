@@ -1,0 +1,38 @@
+.door-radio-details {
+    /* margin-top: 10px; */
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  /* opacity: 0.8; */
+ 
+}
+
+.info-radio-details {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top:20%;
+    left:20%;
+    font-family: "Roboto";
+    color:black;
+
+}
+
+.form-reviews {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    top:150%;
+    left:0;
+}
+
+.comments {
+    position:absolute;
+    top:20%;
+    color:black;
+    
+}
+
+

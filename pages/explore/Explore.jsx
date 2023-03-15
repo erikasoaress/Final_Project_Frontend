@@ -16,7 +16,27 @@ const AVAILABLE_GENRES = [
   {
     name: "Rock",
     value: "rock",
+    theme: "black",
+  },
+  {
+    name: "Jazz",
+    value: "jazz,blues,experimental jazz",
+    theme: "purple",
+  },
+  {
+    name: "Reggae",
+    value: "reggae",
     theme: "green",
+  },
+  {
+    name: "Classic",
+    value: "classical music",
+    theme: "yellow",
+  },
+  {
+    name: "Indie Rock",
+    value: "indie rock",
+    theme: "blue",
   },
 ];
 
@@ -31,6 +51,7 @@ function Explore() {
       const response = await axios.get(
         `${import.meta.env.VITE_API_URL}/api/radio/all-stations`
       );
+       console.log(response.data);
       setRadios(response.data);
       setSearchRadios(response.data);
     } catch (error) {
@@ -139,9 +160,8 @@ function Explore() {
           )}  
         </div>
 
-              </section>
+  </section>
       </div>
- 
   );
 }
 

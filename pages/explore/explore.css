@@ -56,6 +56,22 @@
     color: black;
 }
 
+.genre-list .yellow-genre {
+    background-color: yellow;
+    color: black;
+}
+
+.genre-list .purple-genre {
+    background-color: purple;
+    color: white;
+}
+
+.genre-list .blue-genre {
+    background-color: blue;
+    color: white;
+}
+
+
 .radios-cards {
     padding: 0 20px;
 
