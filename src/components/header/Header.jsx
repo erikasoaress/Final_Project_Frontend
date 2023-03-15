@@ -32,7 +32,7 @@ function Header() {
             <Link className="navbar-link" to={`/profile/${user._id}`}>
               Hello, {user.name}
             </Link>
-            <button className="navbar-link logout" onClick={logout}>
+            <button className="button" onClick={logout}>
               Logout
             </button>
           </>

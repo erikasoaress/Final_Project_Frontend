@@ -86,18 +86,11 @@ function Explore() {
         {searchRadios.length &&
           searchRadios.map((radio) => {
             return (
-<<<<<<< HEAD
               <Link to={`/radio/${radio._id}`}>
-                <h1>{radio.name}</h1>;
+                <h1>{radio.name}</h1>
               </Link>
-            );
+            )
           })}
-=======
-             <Link to={`/radio/${radio._id}`}>
-               <h1>{radio.name}</h1>
-             </Link>
-          )})}
->>>>>>> bc4d981be0c98dc9241f8e3a3f5ee274772f834c
       </div>
     </div>
   );

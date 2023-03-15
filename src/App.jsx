@@ -28,7 +28,6 @@ function App() {
       );
       console.log(response.data);
       setRadios(response.data);
-      setSearchRadios(response.data);
     } catch (error) {
       console.log(error);
     }

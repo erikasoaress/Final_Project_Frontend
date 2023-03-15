@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import Review from "./review/Review";
+
 
 function RadioDetails() {
   const [radio, setRadio] = useState(null);
@@ -26,6 +28,7 @@ function RadioDetails() {
     <div>
       <h1>Radio</h1>
       <h3>{radio && radio.name}</h3>
+      <Review/>
     </div>
   );
 }
