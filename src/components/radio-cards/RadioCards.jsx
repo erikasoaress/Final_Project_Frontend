@@ -1,32 +1,31 @@
 
 import React ,{useContext} from "react";
-import "./radio-cards.css"
 import { PlayerContext } from "../../context/player.context";
 import {Link} from "react-router-dom"
+import "./radio-cards.css"
 
 
 function RadioCards({radio}) {
     const { play } = useContext(PlayerContext);
 
+    return (
+        <div className="card">
+            <div className="card-image" style={
+                {
+                    backgroundImage: `url(${radio.favicon || radio.img || "/radio.jpg"})`
+                }
+            }/>
 
+            <div className="card-content">
+                <h3>{!radio.name || radio.name === "" ? "Unknown name" : radio.name}</h3>
+                <p>{!radio.country || radio.country === "" ? "Unknown country" : radio.country}</p>
 
-            return (
+                {/* TODO put see radio info link */}
+            </div>
 
-                <div className="card-container">
-                    <div className="card" onClick={() => play(radio.name, radio.url, radio.favicon)}>
-                    <img src={`${radio.favicon}`} onError={(e) => e.target.src = '/radio.jpg'} alt="radio symbol" style={{ width: "250px" }} />
-                        {/* <img src={`${radio.favicon}`} alt="radio symbol" style={{ width: "150px" }} /> */}
-                        <h3>{radio.name}</h3>
-                        <p>{radio.country}</p>
-                        <Link to={radio.homepage}> Radio website </Link>
-
-                    </div>
-                </div>
-
-
-            )
-   
-
+            <button onClick={() => play(radio.name, radio.url, (radio.favicon || radio.img))} className="card-button">Play radio</button>
+        </div>
+    )
 
 }
 

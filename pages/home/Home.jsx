@@ -36,7 +36,7 @@ function Home() {
       </section>
       
 
-      <section className="radios-list-section">
+      {/* <section className="radios-list-section">
 
         <div className="card-container">
 
@@ -73,7 +73,7 @@ function Home() {
           
         </div>
 
-      </section>
+      </section> */}
     </div>
   )
 }

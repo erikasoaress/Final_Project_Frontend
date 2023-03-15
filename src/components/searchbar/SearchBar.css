@@ -21,16 +21,16 @@
   .search-button {
     background-color: transparent;
     border: none;
-    cursor: pointer;
-    font-size: 16px;
+    cursor:pointer;
+   
     
     display: flex;
     align-items: center;
   }
   
   .magnifyingglass {
-    width: 18px;
-    height: 18px;
+    width: 24px;
+    height: 24px;
     object-fit: contain;
     color: #000000;
   }
