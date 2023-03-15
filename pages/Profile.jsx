@@ -3,8 +3,8 @@ import { AuthContext } from "../src/context/auth.context";
 import "./profile.css";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Home
- from "./home/Home";
+
+
 function Profile() {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
