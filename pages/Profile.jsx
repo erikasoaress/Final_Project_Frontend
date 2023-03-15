@@ -69,13 +69,14 @@ function Profile() {
             Edit Profile
           </button>
         </form>
-
-        <div >
-        {profile &&
-          profile.favoriteRadios.map((radio) => {
-            return <p>{radio.name}</p>;
-          })}
-      </div>
+        <div className="favoriteRadios">
+          <h1>My Favorite Stations</h1>
+          {profile &&
+            profile.favoriteRadios.map((radio) => {
+              return;
+              <h1>{radio.name}</h1>;
+            })}
+        </div>
       </div>
     </>
   );

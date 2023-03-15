@@ -19,7 +19,12 @@ width: 50%;
     width: 300px;
     padding: 50px;
     line-height: 40px;
-    padding-bottom: 50%;
+    padding-bottom: 30%;
+
+}
+
+.favoriteRadios{
+    margin-left: 200px;
 }
 
 .editProfileButton{
