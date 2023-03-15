@@ -54,10 +54,10 @@ function App() {
           <Route path="/explore/:id" element={<RadioDetails />} />
           <Route path="/explore/:genre" element={<RadiosGenre />} />
           <Route path="/explore/:country" element={<RadiosCountry/>} />
-          <Route path="/radio/:id" element={<RadioDetails radios={radios}/>} />
+          <Route path="/radio/:radioName" element={<RadioDetails radios={radios}/>} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/profile/:_id" element={<Profile />} />
+          <Route path="/profile/:id" element={<Profile />} />
         </Routes>
       </div>
     </div>

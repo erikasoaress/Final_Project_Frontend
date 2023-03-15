@@ -1,0 +1,15 @@
+.form-reviews {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    top:150%;
+    left:0;
+}
+
+.comments {
+    position:absolute;
+    top:20%;
+    color:black;
+    
+}
