@@ -2,35 +2,60 @@
 font-family: "roboto";
 }
 
-.profileDiv{
+.profile-div{
 display: flex;
 flex-direction: column;
-    background-color: orange;
+background-color: orange;
 height: 100%;
-width: 50%;
+width: 30%;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.profileForm{
+
+
+
+.profile-form {
     display: flex;
     position: relative;
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    width: 300px;
+    width: 200px;
+    margin-top: 16px;
     padding: 50px;
-    line-height: 40px;
+    line-height: 50px;
     padding-bottom: 30%;
 
 }
 
-.favoriteRadios{
+.profile-form label{
+   
+font-size: 20px;
+font-weight: bold;
+} 
+
+.profile-input {
+    border:none;
+    border-radius: 8px 8px 8px 8px;
+    height: 24px;
+}
+
+.favorite-radios{
     margin-left: 200px;
 }
 
-.editProfileButton{
+.edit-profile-button{
     margin-top: 20px;
     height: 30px;
-    background-color: antiquewhite;
+    background-color: #00FFA3;
     border-radius: 12px;
-    border: 1cap;
+    border: none;
+}
+
+.user-picture {
+    position:absolute;
+    top:15%;
+    left:11%;
+    width: 100px;
+    height:100px;
 }

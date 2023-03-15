@@ -36,44 +36,7 @@ function Home() {
       </section>
       
 
-      {/* <section className="radios-list-section">
-
-        <div className="card-container">
-
-          {
-            radios.map((radio) => (
-              <div 
-                className="card"
-                onClick={() => play(radio.name, radio.homepage, radio.favicon)}
-              >
-                <h2>{radio.name}</h2>
-              </div>
-            ))
-          }
-
-          <div className="card" onClick={() => play("Deutschlandfunk [MP3 128k]", "http://st01.dlf.de/dlf/01/128/mp3/stream.mp3", "http://www.deutschlandfunk.de/static/img/deutschlandfunk/icons/apple-touch-icon-128x128.png")}>
-            <h2>Card title</h2>
-            <p>Card description</p>
-          </div>
-          
-          <div className="card">
-
-            <h2>Card title</h2>
-            <p>Card description</p>
-          </div>
-
-          <div className="card">
-
-            <h2>Card title</h2>
-            <p>Card description</p>
-          </div>
-
-        
-
-          
-        </div>
-
-      </section> */}
+    
     </div>
   )
 }
