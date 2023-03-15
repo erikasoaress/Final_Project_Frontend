@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Review from "./review/Review";
 
 
+
 function RadioDetails() {
   const [radio, setRadio] = useState(null);
   const { id } = useParams();
@@ -29,6 +30,8 @@ function RadioDetails() {
       <h1>Radio</h1>
       <h3>{radio && radio.name}</h3>
       <Review/>
+      <p>{radio && radio.country}</p>
+      
     </div>
   );
 }

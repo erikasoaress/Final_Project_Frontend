@@ -1,11 +1,12 @@
 import React from "react";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import ".././src/components/radio-cards/radio-cards.css"
+
 import RadioCards from "../src/components/radio-cards/RadioCards";
 
 
 function RadiosRanked() {
+  
   const [radiosRanked, setRadiosRanked] = useState([]);
 
   const getRankedRadios = async () => {
@@ -31,11 +32,11 @@ function RadiosRanked() {
 
   return (
 
-    <div>  
+    <> 
         {radiosRanked.length && radiosRanked.map((radio) => {
       return(<RadioCards radio={radio}/>)})
     }
-</div>
+</>
 
   )
 }
