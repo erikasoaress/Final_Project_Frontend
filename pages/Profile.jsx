@@ -60,46 +60,50 @@ function Profile() {
 
   return (
     <>
+  <div className="big-container">
+    <div className="profile-div">
       <img className="user-picture" src="/userpicture.png" />
-      <div className="profile-div">
-        <form onSubmit={handleSubmit} className="profile-form">
-          <label htmlFor="title">Username:</label>
-          <input
-            className="profile-input"
-            type="text"
-            onChange={handleName}
-            value={name}
-            placeholder="New Username"
-          />
 
-          <label htmlFor="email">Email:</label>
-          <input
-            className="profile-input"
-            type="text"
-            onChange={handleEmail}
-            value={email}
-            placeholder="New Email"
-          />
-          <button type="submit" className="edit-profile-button">
-            Edit Profile
-          </button>
-        </form>
-      </div>
-      <div>
-        <h1 className="title-collection">Collections</h1>
-        {profile &&
-          profile.favoriteRadios.map((radio) => {
-            return (
-              <>
-                <FavoriteRadios radio={radio} />
-                <h1>{radio.name}</h1>
-              </>
-            );
-          })}
-      </div>
-    </>
-  );
+      <form onSubmit={handleSubmit} className="profile-form">
+        <label htmlFor="title">Username:</label>
+        <input
+          className="profile-input"
+          type="text"
+          onChange={handleName}
+          value={name}
+          placeholder="New Username"
+        />
 
-}
+        <label htmlFor="email">Email:</label>
+        <input
+          className="profile-input"
+          type="text"
+          onChange={handleEmail}
+          value={email}
+          placeholder="New Email"
+        />
+        <button type="submit" className="edit-profile-button">
+          Edit Profile
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div>
+    <h1 className="title-collection">Collections</h1>
+    {profile &&
+      profile.favoriteRadios.map((radio) => {
+        return (
+          <>
+            <FavoriteRadios radio={radio} />
+            <h1>{radio.name}</h1>
+          </>
+        );
+      })}
+  </div>
+</>
+
+)}
+
 export default Profile;
 

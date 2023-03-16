@@ -3,7 +3,6 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import Review from "./review/Review";
 import "./radio-details.css";
-import radioService from "../src/services/radio.service";
 import { AuthContext } from "../src/context/auth.context";
 
 function RadioDetails() {
