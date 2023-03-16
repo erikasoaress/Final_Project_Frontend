@@ -3,6 +3,7 @@ import { AuthContext } from "../src/context/auth.context";
 import "./profile.css";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Profile() {
   const { user, authenticateUser } = useContext(AuthContext);
@@ -59,38 +60,44 @@ function Profile() {
 
   return (
     <>
-      <img className="user-picture" src="/userpicture.png" />
-      <div className="profile-div">
-        <form onSubmit={handleSubmit} className="profile-form">
-          <label htmlFor="title">Username:</label>
-          <input
-            className="profile-input"
-            type="text"
-            onChange={handleName}
-            value={name}
-            placeholder="New Username"
-          />
+      <div className="big-container">
+        <div className="profile-div">
+          <img className="user-picture" src="/userpicture.png" />
 
-          <label htmlFor="email">Email:</label>
-          <input
-            className="profile-input"
-            type="text"
-            onChange={handleEmail}
-            value={email}
-            placeholder="New Email"
-          />
-          <button type="submit" className="edit-profile-button">
-            Edit Profile
-          </button>
-        </form>
+          <form onSubmit={handleSubmit} className="profile-form">
+            <label htmlFor="title">Username:</label>
+            <input
+              className="profile-input"
+              type="text"
+              onChange={handleName}
+              value={name}
+              placeholder="New Username"
+            />
+
+            <label htmlFor="email">Email:</label>
+            <input
+              className="profile-input"
+              type="text"
+              onChange={handleEmail}
+              value={email}
+              placeholder="New Email"
+            />
+            <button type="submit" className="edit-profile-button">
+              Edit Profile
+            </button>
+          </form>
+        </div>
+
         <div className="favorite-radios">
           <h1>My Favorite Stations</h1>
           {profile &&
             profile.favoriteRadios.map((radio) => {
               return (
                 <div>
-                  <h1>Hello</h1>
-                  <h1>{radio.name}</h1>
+                  <Link to={`/radio/${radio.name}`}>
+                    <h3>{radio.name}</h3>
+                    <h4>{radio.country}</h4>
+                  </Link>
                 </div>
               );
             })}

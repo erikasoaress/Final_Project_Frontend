@@ -1,5 +1,6 @@
 *{
 font-family: "roboto";
+text-decoration: none;
 }
 
 .profile-div{
@@ -12,16 +13,17 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 
-
-
 .profile-form {
     display: flex;
-    position: relative;
-    justify-content: center;
+    float: left;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    justify-items: flex-start;
     text-align: center;
     flex-direction: column;
     width: 200px;
     margin-top: 16px;
+    margin-left: 0px;
     padding: 50px;
     line-height: 50px;
     padding-bottom: 30%;
@@ -40,9 +42,6 @@ font-weight: bold;
     height: 24px;
 }
 
-.favorite-radios{
-    margin-left: 200px;
-}
 
 .edit-profile-button{
     margin-top: 20px;
@@ -58,4 +57,19 @@ font-weight: bold;
     left:11%;
     width: 100px;
     height:100px;
+}
+
+.favorite-radios{
+    background-color: black;
+    display: flex;
+    margin-left: 100%;
+    margin-top: 0%;
+    flex-direction: row;
+    text-align: center;
+    height: 100%;
+    padding: 50px;
+    width: 90%;
+    color: yellow;
+    line-height: 5px;
+
 }

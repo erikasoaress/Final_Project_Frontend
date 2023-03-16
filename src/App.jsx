@@ -58,7 +58,7 @@ function App() {
           <Route path="/radio/:radioName" element={<RadioDetails radios={radios}/>} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/profile/:id" element={<Profile />} />
+          <Route path="/profile/:id" element={<Profile radios={radios}/>} />
         </Routes>
       </div>
     </div>
