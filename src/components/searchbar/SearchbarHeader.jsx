@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import RadioCards from "../radio-cards/RadioCards";
-import img from './magnifyingglass.png'
+
 
 function SearchbarHeader() {
   const [search, setSearch] = useState("");
