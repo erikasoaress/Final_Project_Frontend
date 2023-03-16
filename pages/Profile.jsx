@@ -5,7 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function Profile() {
-  const { user } = useContext(AuthContext);
+  const { user, authenticateUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -20,9 +20,9 @@ function Profile() {
     try {
       if (user) {
         let response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/profile/${user._id}`
+          `${import.meta.env.VITE_API_URL}/api/profile/${user._id}`
         )
-        console.log(response)
+        console.log(response.data)
         setProfile(response.data);
       }
     } catch (error) {
@@ -35,13 +35,18 @@ function Profile() {
     const body = { name, email };
 
     try {
-      await axios
+     const updatedUser = await axios
         .put(
           `${import.meta.env.VITE_API_URL}/api/profile/edit/${user._id}`,
           body)
-      navigate("/")
-        console.log(user.favoriteRadios);
+          console.log(updatedUser)
 
+          localStorage.setItem("authToken", updatedUser.data.authToken)
+          authenticateUser()
+
+          console.log(updatedUser)
+/*       navigate("/")
+ */
     } catch (error) {
       console.log(error);
     }
@@ -54,7 +59,7 @@ function Profile() {
 
   return (
     <>
-    <img className="user-picture"src="/userpicture.png"/>
+      <img className="user-picture" src="/userpicture.png" />
       <div className="profile-div">
         <form onSubmit={handleSubmit} className="profile-form">
           <label htmlFor="title">Username:</label>
@@ -62,6 +67,7 @@ function Profile() {
             className="profile-input"
             type="text"
             onChange={handleName}
+            value={name}
             placeholder="New Username"
           />
 
@@ -70,6 +76,7 @@ function Profile() {
             className="profile-input"
             type="text"
             onChange={handleEmail}
+            value={email}
             placeholder="New Email"
           />
           <button type="submit" className="edit-profile-button">
@@ -79,7 +86,7 @@ function Profile() {
         <div className="favorite-radios">
           <h1>My Favorite Stations</h1>
           {profile &&
-            user.favoriteRadios.map((radio) => {
+            profile.favoriteRadios.map((radio) => {
               return (
                 <div>
                   <h1>Hello</h1>
