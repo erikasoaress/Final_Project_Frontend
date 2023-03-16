@@ -17,10 +17,10 @@ function SearchBarGenre(props) {
         onChange={handleSearch}
       />
       <button type="submit" className="search-button">
-        <img className="magnifyingglass" src="/public/magnifyingglass.png" />
+        <img className="magnifyingglass" src="/public/magnifyingglass.png"/>
       </button>
     </div>
-  );
+  )
 }
 
 export default SearchBarGenre;
