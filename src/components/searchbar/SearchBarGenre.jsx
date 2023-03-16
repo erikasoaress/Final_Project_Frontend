@@ -18,6 +18,11 @@ function SearchBarGenre(props) {
       />
       <button type="submit" className="search-button">
         <img className="magnifyingglass" src="../../../public/magnifyingglass.png"/>
+        <img className="magnifyingglass" src="../../public/magnifyingglass.png"/>
+        <img className="magnifyingglass" src="../public/magnifyingglass.png"/>
+        <img className="magnifyingglass" src="././../public/magnifyingglass.png"/>
+        <img className="magnifyingglass" src=".././public/magnifyingglass.png"/>
+        <img className="magnifyingglass" src="./../public/magnifyingglass.png"/>
       </button>
     </div>
   )
