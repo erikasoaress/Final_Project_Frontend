@@ -8,7 +8,7 @@
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 
-    background-color: rgba(255, 255, 255, .9);
+    background-color: rgba(249, 138, 33, 0.9);
     box-shadow: 0 0 15px rgba(0, 0, 0, .2);
 }
 
@@ -42,4 +42,5 @@
 
 .player-radio-controls audio {
     max-width: 128px;
+     
 }

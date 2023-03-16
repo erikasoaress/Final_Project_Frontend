@@ -54,28 +54,29 @@ function Profile() {
 
   return (
     <>
-      <div className="profileDiv">
-        <form onSubmit={handleSubmit} className="profileForm">
-          <label htmlFor="title">Change Username</label>
+    <img className="user-picture"src="/userpicture.png"/>
+      <div className="profile-div">
+        <form onSubmit={handleSubmit} className="profile-form">
+          <label htmlFor="title">Username:</label>
           <input
+            className="profile-input"
             type="text"
             onChange={handleName}
-            placeholder="                                New Username"
+            placeholder="New Username"
           />
 
-          <label htmlFor="email">Change Email</label>
+          <label htmlFor="email">Email:</label>
           <input
+            className="profile-input"
             type="text"
             onChange={handleEmail}
-            placeholder="                                   New Email"
+            placeholder="New Email"
           />
-          <button type="submit" className="editProfileButton">
+          <button type="submit" className="edit-profile-button">
             Edit Profile
           </button>
         </form>
-
-
-        <div className="favoriteRadios">
+        <div className="favorite-radios">
           <h1>My Favorite Stations</h1>
           {profile &&
             user.favoriteRadios.map((radio) => {

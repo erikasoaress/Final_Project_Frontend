@@ -1,148 +1,107 @@
 .explore-page {
-    font-family: "Roboto", sans-serif;
-    padding: 30px 0;
+  font-family: "Roboto", sans-serif;
+  padding: 30px 0;
 }
 
 .explore-categories {
-    width: 80%;
-    padding: 0 60px 0 0;
+  width: 80%;
+  padding: 0 60px 0 0;
 
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 
-    background-color: white;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
-    border-top-right-radius: 200px;
-    border-bottom-right-radius: 200px;
+  background-color: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
 }
 
 .explore-category {
-    max-width: 33%;
-    padding: 20px;
+  max-width: 33%;
+  padding: 20px;
 }
 
 .explore-category-info h1 {
-    margin: 0 0 16px;
+  margin: 0 0 16px;
 }
 
 .genre-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 100%;
 }
 
 .genre-list .genre {
-    margin-right: 4px;
-    margin-bottom: 8px;
-    padding: 4px 8px;
-    border-radius: 200px;
-    
-    font-size: .8rem;
-    font-weight: bolder;
-    color: white;
-    background-color: black;
-    text-transform: uppercase;
-    cursor:pointer;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  padding: 4px 8px;
+  border-radius: 200px;
+
+  font-size: 0.8rem;
+  font-weight: bolder;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .genre-list .red-genre {
-    background-color: rgb(203, 27, 27);
-    color: white;
+  background-color: rgb(203, 27, 27);
+  color: white;
 }
 
 .genre-list .green-genre {
-    background-color: rgb(12, 228, 59);
-    color: black;
+  background-color: rgb(12, 228, 59);
+  color: black;
 }
 
 .genre-list .yellow-genre {
-    background-color: yellow;
-    color: black;
+  background-color: yellow;
+  color: black;
 }
 
 .genre-list .purple-genre {
-    background-color: purple;
-    color: white;
+  background-color: purple;
+  color: white;
 }
 
 .genre-list .blue-genre {
-    background-color: blue;
-    color: white;
+  background-color: blue;
+  color: white;
 }
 
-
 .radios-cards {
-    padding: 0 20px;
-
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: flex-start;
+  padding: 0 20px;
+  
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: flex-start;
 }
 
 .radio-card-wrapper {
-    flex-basis: 25%;
+  flex-basis: 25%;
 }
 
 .radio-card-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-/* 
-.card-wrapper{
-   display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-   
-    
-    
-}
-.card {
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
-    display: flex;
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    justify-content: center;
-    padding-bottom: 80px;
-    border-radius: 50%;
-
-    width: 100%;
-    height: 300px;
-    color: white;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    margin: 10px;
-} */
-
-/* 
-.card-container {
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+.popular-button {
+ 
+  background-color: rgb(255, 255, 0);
+  border: 0;
+  border-radius: 20px;
+  height: 25px;
+  width: 80px;
+  padding:10px;
+  text-decoration: none;
+  color:black;
 }
 
-.card {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-    border: 10px solid #ccc;
-    border-radius: 100px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    margin: 10px;
-
-
+.popular-button:hover {
+  background-color: rgb(255, 200, 0);
 }
 
-.card-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
 
-
-} */

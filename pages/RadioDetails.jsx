@@ -67,16 +67,28 @@ function RadioDetails() {
             <img src={radio.img} />
             <p>{radio.country}</p>
             <Review thisRadio={radio} setUpdated={setUpdated} />
-            <button onClick={addFavorite}>Add to Favorites</button>
+            <button className="favorites-button" onClick={addFavorite}>
+              Add to Favorites
+            </button>
           </>
         )}
       </div>
 
-      <div >
-        {radio &&
-          radio.reviews.map((review) => {
-            return <p>{review.comment}</p>;
-          })}
+      <div className="comments-container">
+        <div className="comments">
+          {radio &&
+            radio.reviews.map((review) => {
+              return (
+                <p>
+                  <img
+                    className="star"
+                    src="/star.png"
+                  ></img>
+                  {review.comment}
+                </p>
+              );
+            })}
+        </div>
       </div>
     </div>
   );

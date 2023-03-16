@@ -1,38 +1,55 @@
 .door-radio-details {
-    /* margin-top: 10px; */
   position: relative;
   width: 100%;
   max-width: 700px;
-  /* opacity: 0.8; */
- 
+  opacity: 0.9;
 }
 
 .info-radio-details {
-    position:absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    top:20%;
-    left:20%;
-    font-family: "Roboto";
-    color:black;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 
+  top: 10%;
+  left: 5%;
+  font-family: "Roboto";
+  color: white;
 }
 
 .form-reviews {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    justify-content: center;
-    top:150%;
-    left:0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  top: 140%;
+  left: 30%;
 }
 
 .comments {
-    position:absolute;
-    top:20%;
-    color:black;
-    
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: 20%;
+  left: 25%;
+  color: white;
+}
+
+.favorites-button {
+ cursor:grab;
+  background-color: rgb(255, 255, 0);
+  border: 0;
+  border-radius: 20px;
+  height: 50px;
+  width: 100px;
+ 
+  margin-bottom: 5px;
+  text-decoration: none;
+  color: black;
 }
 
 
+
+.star{
+   width: 30px; 
+}
