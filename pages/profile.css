@@ -1,23 +1,17 @@
 * {
   font-family: "roboto";
   text-decoration: none;
-
 }
 
 .profile-form {
   display: flex;
-  float: left;
-  justify-content: flex-start;
-  justify-self: flex-start;
-  justify-items: flex-start;
   text-align: center;
   flex-direction: column;
   width: 200px;
-  margin-top: 16px;
+  margin-top: 28px;
   margin-left: 0px;
   padding: 50px;
   line-height: 50px;
-  padding-bottom: 30%;
 }
 
 .profile-form label {
@@ -41,8 +35,9 @@
 
 .user-picture {
   position: absolute;
-  top: 15%;
-  left: 11.5%;
+  top: 10%;
+  left: 38%;
+  justify-content: center;
   width: 100px;
   height: 100px;
 }
@@ -51,17 +46,17 @@
   display: flex;
   text-align: center;
   flex-direction: column;
+  justify-content: center;
   position: absolute;
   width: 200px;
   padding: 50px;
-  line-height: 50px;
-  margin-left: -500px;
-  margin-top: -50px;
 }
 
 .profile-div {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: orange;
   width: 30%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -80,53 +75,40 @@
 
 .big-container {
   display: flex;
-  flex-direction: row;
+  position: relative;
   height: 100%;
+}
+
+p {
+}
+
+ h1 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
   
 }
 
-p{
+a {
+  color: black;
 }
 
-h1{
-    text-decoration: underline;
-    text-underline-offset: 5px
-    ;
-}
-
-a{
-    color: black;
-}
-
-.station{
-    background-color: orange;
-    border-radius:50px;
-    width: 550px;
-    height: 50px;
-    line-height: 0px;
-    margin-top: 20px;
-    margin-left: -100px  ;
-
-
+.station {
+  background-color: orange;
+  border-radius: 50px;
+  width: 500px;
+  height: 50px;
+  line-height: 0px;
+  margin-top: 20px;
+  margin-left: -100px;
+  color: black;
   justify-content: space-around;
 
-  background-color:  orange;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
 }
 
-.title-collection {
-  width: 20%;
-  height:20%;
-  padding: 16px 60px 0 0;
-  position: absolute;
-  top: 7%;
-  left: 28%;
-  display: flex;
-  justify-content: space-around;
-  background-color: orange;
-  /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); */
-  border-top-right-radius: 200px;
-  border-bottom-right-radius: 200px;
+.station h3 {
+    color:black;
+    
 }

@@ -105,7 +105,7 @@ function Profile() {
                     <br />
                     <br />
                     <br />
-                    <h3>{radio.name}</h3>
+                    <h3 className="radio-name">{radio.name}</h3>
                   </div>
                 </Link>
               </>
