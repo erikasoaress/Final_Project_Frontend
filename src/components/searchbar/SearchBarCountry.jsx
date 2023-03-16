@@ -17,7 +17,10 @@ function SearchBar(props) {
         onChange={handleSearch}
       />
       <button type="submit" className="search-button">
-        <img className="magnifyingglass" src="/public/magnifyingglass.png" />
+        <img
+          className="magnifyingglass"
+          src="https://res.cloudinary.com/dh7m8kaap/image/upload/v1678965219/magnifyingglass_a3hvta.png"
+        />
       </button>
     </div>
   );
