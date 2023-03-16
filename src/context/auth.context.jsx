@@ -24,7 +24,6 @@ function AuthWrapper(props) {
         });
         //here we know that the response is okay so we can update the states
         setLoggedIn(true);
-        console.log(response.data)
         setUser(response.data);
         setLoading(false);
       } catch (error) {

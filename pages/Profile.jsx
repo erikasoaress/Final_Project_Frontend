@@ -41,7 +41,7 @@ function Profile() {
           body)
           console.log(updatedUser)
 
-          localStorage.setItem("authToken", updatedUser.data.authToken)
+        //  localStorage.setItem("authToken", updatedUser.data.authToken)
           authenticateUser()
 
           console.log(updatedUser)
