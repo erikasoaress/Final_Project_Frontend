@@ -72,7 +72,7 @@ function Signup() {
 
  <div className="form-wrapper">
       <p>Already have an account? 
-        <Link className="form" to="/login">Login</Link></p>
+        <Link className="login-button-signup" to="/login">Login</Link></p>
     </div>
 
   </form>
