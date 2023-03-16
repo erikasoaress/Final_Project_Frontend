@@ -42,7 +42,6 @@ function Login() {
 
   return (
     <>
-
       <div className="door-wrapper">
         <img className="door" src="/door.png" />
 
@@ -54,7 +53,8 @@ function Login() {
             name="email"
             id="email"
             value={email}
-            onChange={handleEmail} />
+            onChange={handleEmail}
+          />
 
           <label htmlFor="password">Password:</label>
           <input
@@ -65,24 +65,20 @@ function Login() {
             onChange={handlePassword}
           />
 
-<button className="button-forms" onClick={handleSubmit}>
-  <img src="/button.png" alt="Submit" />
-</button>
+          <button className="button-forms" onClick={handleSubmit}>
+            <img src="/button.png" alt="Submit" />
+          </button>
 
-         
-        <div className="form-wrapper">
-
-      <p>Don´t have an account? 
-        <Link className="form" to="/signup">Signup</Link></p>
-    </div>
-
+          <div className="form-wrapper">
+            <p>
+              Don´t have an account?
+              <Link className="form" to="/signup">
+                <button className="signup-button">Sign up</button>
+              </Link>
+            </p>
+          </div>
         </form>
-        
-
       </div>
-
-
-
     </>
   );
 }

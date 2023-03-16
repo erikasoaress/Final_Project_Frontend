@@ -1,23 +1,20 @@
 * {
   font-family: "roboto";
-}
+  text-decoration: none;
 
-.profile-div {
-  display: flex;
-  background-color: orange;
-  height: 100%;
-  width: 30%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .profile-form {
   display: flex;
-  position: relative;
-  justify-content: center;
+  float: left;
+  justify-content: flex-start;
+  justify-self: flex-start;
+  justify-items: flex-start;
   text-align: center;
   flex-direction: column;
   width: 200px;
   margin-top: 16px;
+  margin-left: 0px;
   padding: 50px;
   line-height: 50px;
   padding-bottom: 30%;
@@ -43,20 +40,73 @@
 }
 
 .user-picture {
-    position:absolute;
-    top:15%;
-    left:11%;
-    width: 100px;
-    height:100px;
+  position: absolute;
+  top: 15%;
+  left: 11.5%;
+  width: 100px;
+  height: 100px;
 }
 
-.favorites-collection {
-  width: 20%;
-  padding: 0 60px 0 0;
-  position: absolute;
-  top: 30%;
-  left: 28%;
+.profile-form {
   display: flex;
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  width: 200px;
+  padding: 50px;
+  line-height: 50px;
+  margin-left: -500px;
+  margin-top: -50px;
+}
+
+.profile-div {
+  display: flex;
+  flex-direction: column;
+  background-color: orange;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.favorite-radios {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  width: 30%;
+  color: yellow;
+  line-height: 5px;
+}
+
+.big-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  
+}
+
+p{
+}
+
+h1{
+    text-decoration: underline;
+    text-underline-offset: 5px
+    ;
+}
+
+a{
+    color: black;
+}
+
+.station{
+    background-color: orange;
+    border-radius:50px;
+    width: 550px;
+    height: 50px;
+    line-height: 0px;
+    margin-top: 20px;
+    margin-left: -100px  ;
+
 
   justify-content: space-around;
 

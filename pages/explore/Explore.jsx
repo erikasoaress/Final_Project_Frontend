@@ -113,14 +113,14 @@ function Explore () {
 
         <div className="explore-category">
           <div className="explore-category-info">
-            <h1>Country</h1>
+            <h2>Country</h2>
             <SearchBar setCountry={setCountry} />
           </div>
         </div>
 
         <div className="explore-category">
           <div className="explore-category-info">
-            <h1>Genre</h1>
+            <h2>Genre</h2>
           </div>
 
           <div className="genre-list">
@@ -139,7 +139,7 @@ function Explore () {
 
         <div className="explore-category">
           <div className="explore-category-info">
-            <h1>   Popular</h1>
+            <h2>   Popular</h2>
             <Link className="popular-button"to={`/explore/popular`}>See Radios</Link>
           </div>
         </div>
