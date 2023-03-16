@@ -72,8 +72,8 @@ function Login() {
           <div className="form-wrapper">
             <p>
               Don´t have an account?
-              <Link className="signup-button" to="/signup">
-                Signup
+              <Link className="form" to="/signup">
+                <button className="signup-button">Sign up</button>
               </Link>
             </p>
           </div>
