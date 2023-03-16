@@ -3,6 +3,7 @@ import { AuthContext } from "../src/context/auth.context";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./profile.css";
+import { Link } from "react-router-dom";
 import FavoriteRadios from "../src/components/favorites/FavoriteRadios";
 
 function Profile() {
