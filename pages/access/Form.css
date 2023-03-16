@@ -73,12 +73,13 @@ form {
   cursor:pointer;
   width: 60%;
   margin-top: 20px;
-  margin-left: 30px;
+  margin-left: 10%;
   animation: spin 4s linear infinite;
   
 }
 
-.signup-button {
+
+.login-button-signup {
  
   background-color: rgb(255, 255, 0);
   border: 0;
@@ -86,7 +87,7 @@ form {
   height: 25px;
   width: 80px;
   padding:10px;
-
+  margin-top: 30px;
   text-decoration: none;
   color:black;
 }

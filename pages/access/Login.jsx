@@ -66,16 +66,18 @@ function Login() {
           />
 
           <button className="button-forms" onClick={handleSubmit}>
-            <img src="/button.png" alt="Submit" />
+            <img
+              src="/button.png"
+              alt="Submit"
+              style={{ marginLeft: "70px" }}
+            />
           </button>
 
           <div className="form-wrapper">
-            <p>
-              Don´t have an account?
-              <Link className="form" to="/signup">
-                <button className="signup-button">Sign up</button>
-              </Link>
-            </p>
+            <p>Don´t have an account?</p>
+            <Link className="login-button-signup" to="/signup">
+              Sign up
+            </Link>
           </div>
         </form>
       </div>
