@@ -73,6 +73,7 @@ form {
   cursor:pointer;
   width: 60%;
   margin-top: 20px;
+  padding-left: 30px;
   animation: spin 4s linear infinite;
   
 }
