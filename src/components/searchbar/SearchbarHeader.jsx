@@ -3,10 +3,6 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import RadioCards from "../radio-cards/RadioCards";
-<<<<<<< HEAD
-
-=======
->>>>>>> 93250d86714a60fcf90cd6a6d31e026034aab18c
 
 function SearchbarHeader() {
   const [search, setSearch] = useState("");
