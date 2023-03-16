@@ -1,9 +1,9 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../src/context/auth.context";
-import "./profile.css";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import "./profile.css";
+import FavoriteRadios from "../src/components/favorites/FavoriteRadios";
 
 function Profile() {
   const { user, authenticateUser } = useContext(AuthContext);
@@ -115,3 +115,4 @@ function Profile() {
   );
 }
 export default Profile;
+

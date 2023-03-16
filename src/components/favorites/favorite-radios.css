@@ -1,0 +1,16 @@
+
+.favorites-collection {
+  width: 20%;
+  padding: 0 60px 0 0;
+  position: absolute;
+  top: 30%;
+  left: 28%;
+  display: flex;
+
+  justify-content: space-around;
+
+  background-color:  #00ffa3;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+}

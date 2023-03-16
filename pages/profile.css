@@ -108,4 +108,25 @@ a{
     margin-left: -100px  ;
 
 
+  justify-content: space-around;
+
+  background-color:  #00ffa3;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
+}
+
+.title-collection {
+  width: 20%;
+  height:20%;
+  padding: 16px 60px 0 0;
+  position: absolute;
+  top: 7%;
+  left: 28%;
+  display: flex;
+  justify-content: space-around;
+  background-color: orange;
+  /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); */
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
 }
