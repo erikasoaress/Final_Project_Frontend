@@ -38,12 +38,8 @@ function SearchbarHeader() {
       <label htmlFor="search"></label>
       <input type="text" placeholder="Search" value={search} onChange={handleSearch} className="rounded-input" />
        <button type="submit" className="search-button">
-<<<<<<< HEAD
-        <img className="magnifyingglass" src="/magnifyingglass.png" />
-=======
         <img className="magnifyingglass" src="../public/magnifyingglass.png" />
         <img className="magnifyingglass" src="./public/magnifyingglass.png" />
->>>>>>> 353a2b71e502e7ff18e52d4fdba8c1e87080c4ed
       </button>
     </div>
   );
