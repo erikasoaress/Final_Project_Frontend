@@ -35,9 +35,8 @@
 
 .user-picture {
   position: absolute;
-  top: 10%;
-  left: 38%;
-  justify-content: center;
+  top: 15%;
+  left: 12%;
   width: 100px;
   height: 100px;
 }
@@ -103,7 +102,8 @@ a {
   color: black;
   justify-content: space-around;
 
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  background-color:  orange;
+
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
 }

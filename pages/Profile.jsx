@@ -58,9 +58,8 @@ function Profile() {
 
   return (
     <div className="big-container">
+      <img className="user-picture" src="/userpicture.png" />
       <div className="profile-div">
-        <img className="user-picture" src="/userpicture.png" />
-
         <form onSubmit={handleSubmit} className="profile-form">
           <label htmlFor="title">Username:</label>
           <input
