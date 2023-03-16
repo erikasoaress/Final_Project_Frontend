@@ -18,7 +18,7 @@ function SearchBar(props) {
       />
       <button type="submit" className="search-button">
         <img
-     
+          className="magnifyingglass"
           src="https://res.cloudinary.com/dh7m8kaap/image/upload/v1678965219/magnifyingglass_a3hvta.png"
         />
       </button>

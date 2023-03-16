@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import RadioCards from "../radio-cards/RadioCards";
 
-
 function SearchbarHeader() {
   const [search, setSearch] = useState("");
   const handleSearch = (e) => setSearch(e.target.value);
@@ -37,18 +36,10 @@ function SearchbarHeader() {
   return (
     <div className="search-bar">
       <label htmlFor="search"></label>
-      <input
-        type="text"
-        placeholder="Search"
-        value={search}
-        onChange={handleSearch}
-        className="rounded-input"
-      />
-      <button type="submit" className="search-button">
-        <img
-          className="magnifyingglass"
-          src="https://res.cloudinary.com/dh7m8kaap/image/upload/v1678965219/magnifyingglass_a3hvta.png"
-        />
+      <input type="text" placeholder="Search" value={search} onChange={handleSearch} className="rounded-input" />
+       <button type="submit" className="search-button">
+        <img className="magnifyingglass" src="https://res.cloudinary.com/dh7m8kaap/image/upload/v1678965219/magnifyingglass_a3hvta.png" />
+       
       </button>
     </div>
   );
