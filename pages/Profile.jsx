@@ -1,8 +1,9 @@
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../src/context/auth.context";
-import "./profile.css";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "./profile.css";
+import FavoriteRadios from "../src/components/favorites/FavoriteRadios";
 
 function Profile() {
   const { user, authenticateUser } = useContext(AuthContext);
@@ -83,20 +84,22 @@ function Profile() {
             Edit Profile
           </button>
         </form>
-        <div className="favorite-radios">
-          <h1>My Favorite Stations</h1>
-          {profile &&
-            profile.favoriteRadios.map((radio) => {
-              return (
-                <div>
-                  <h1>Hello</h1>
-                  <h1>{radio.name}</h1>
-                </div>
-              );
-            })}
-        </div>
+      </div>
+      <div>
+        <h1 className="title-collection">Collections</h1>
+        {profile &&
+          profile.favoriteRadios.map((radio) => {
+            return (
+              <>
+                <FavoriteRadios radio={radio} />
+                <h1>{radio.name}</h1>
+              </>
+            );
+          })}
       </div>
     </>
   );
+
 }
 export default Profile;
+
