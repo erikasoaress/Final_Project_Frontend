@@ -38,7 +38,7 @@ form {
 
 .login-signup-forms label {
   margin-bottom: 10px;
-  ;
+  
 
 }
 
@@ -46,13 +46,16 @@ form {
   width: 50%;
   display: flex;
   align-items: center;
-  /* background-color: transparent;
-  border: none; */
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
 
 }
 
+.login-signup-forms input[type="text"],
 .login-signup-forms input[type="email"],
 .login-signup-forms input[type="password"] {
+
   border-radius: 20px;
   padding: 10px;
   border: none;
@@ -60,11 +63,16 @@ form {
   margin-bottom: 10px;
 }
 
+.button-forms {
+  position:relative;
+}
+
 
 
 .button-forms img {
-
+  cursor:pointer;
   width: 60%;
   margin-top: 20px;
   animation: spin 4s linear infinite;
+  
 }
