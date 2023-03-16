@@ -40,7 +40,7 @@ const AVAILABLE_GENRES = [
   },
 ];
 
-function Explore() {
+function Explore () {
   const [radios, setRadios] = useState([]);
   const [searchRadios, setSearchRadios] = useState([]);
   const [country, setCountry] = useState("");

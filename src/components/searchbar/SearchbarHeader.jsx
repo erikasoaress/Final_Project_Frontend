@@ -15,7 +15,7 @@ function SearchbarHeader() {
   const searchHeader = async () => {
     try {
       const response = await axios.get(
-        `http://de1.api.radio-browser.info/json/stations?limit=50/search?q=${search}`
+        `http://de1.api.radio-browser.info/json/stations?limit=5000/search?q=${search}`
       );
       setStations(response.data);
       console.log("a", response.data);
