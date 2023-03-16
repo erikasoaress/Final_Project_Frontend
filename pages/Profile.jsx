@@ -3,8 +3,7 @@ import { AuthContext } from "../src/context/auth.context";
 import "./profile.css";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Home
- from "./home/Home";
+
 function Profile() {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -22,8 +21,8 @@ function Profile() {
       if (user) {
         let response = await axios.get(
           `${import.meta.env.VITE_API_URL}/profile/${user._id}`
-        );
-        console.log(response.data)
+        )
+        console.log(response)
         setProfile(response.data);
       }
     } catch (error) {
@@ -36,9 +35,13 @@ function Profile() {
     const body = { name, email };
 
     try {
-      await axios.put(
-        `${import.meta.env.VITE_API_URL}/profile/edit/${user._id}`, body)
+      await axios
+        .put(
+          `${import.meta.env.VITE_API_URL}/api/profile/edit/${user._id}`,
+          body)
       navigate("/")
+        console.log(user.favoriteRadios);
+
     } catch (error) {
       console.log(error);
     }
@@ -47,6 +50,7 @@ function Profile() {
   useEffect(() => {
     getUser();
   }, [user]);
+  
 
   return (
     <>
@@ -69,12 +73,18 @@ function Profile() {
             Edit Profile
           </button>
         </form>
+
+
         <div className="favoriteRadios">
           <h1>My Favorite Stations</h1>
           {profile &&
-            profile.favoriteRadios.map((radio) => {
-              return;
-              <h1>{radio.name}</h1>;
+            user.favoriteRadios.map((radio) => {
+              return (
+                <div>
+                  <h1>Hello</h1>
+                  <h1>{radio.name}</h1>
+                </div>
+              );
             })}
         </div>
       </div>

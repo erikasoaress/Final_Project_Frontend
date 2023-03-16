@@ -33,7 +33,7 @@ function RadiosRanked() {
   return (
 
     <> 
-        {radiosRanked.length && radiosRanked.map((radio) => {
+        {radiosRanked.length && radiosRanked.map((radio, key) => {
       return(<RadioCards radio={radio}/>)})
     }
 </>
