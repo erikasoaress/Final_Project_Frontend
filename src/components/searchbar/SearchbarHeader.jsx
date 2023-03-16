@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import RadioCards from "../radio-cards/RadioCards";
-import img from 'public/magnifyingglass.png'
+
 
 function SearchbarHeader() {
   const [search, setSearch] = useState("");
@@ -37,10 +37,18 @@ function SearchbarHeader() {
   return (
     <div className="search-bar">
       <label htmlFor="search"></label>
-      <input type="text" placeholder="Search" value={search} onChange={handleSearch} className="rounded-input" />
-       <button type="submit" className="search-button">
-        <img className="magnifyingglass" src={img} />
-       
+      <input
+        type="text"
+        placeholder="Search"
+        value={search}
+        onChange={handleSearch}
+        className="rounded-input"
+      />
+      <button type="submit" className="search-button">
+        <img
+          className="/public/magnifyingglass.png"
+          src={img}
+        />
       </button>
     </div>
   );
