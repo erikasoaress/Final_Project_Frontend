@@ -3,7 +3,10 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import RadioCards from "../radio-cards/RadioCards";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 93250d86714a60fcf90cd6a6d31e026034aab18c
 
 function SearchbarHeader() {
   const [search, setSearch] = useState("");
@@ -46,8 +49,8 @@ function SearchbarHeader() {
       />
       <button type="submit" className="search-button">
         <img
-          className="/public/magnifyingglass.png"
-          src={img}
+          className="magnifyingglass"
+          src="https://res.cloudinary.com/dh7m8kaap/image/upload/v1678965219/magnifyingglass_a3hvta.png"
         />
       </button>
     </div>
