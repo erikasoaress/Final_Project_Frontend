@@ -58,7 +58,6 @@ function Profile() {
 
   return (
     <div className="big-container">
-      
       <div className="profile-div">
         <img className="user-picture" src="/userpicture.png" />
         <form onSubmit={handleSubmit} className="profile-form">
@@ -86,31 +85,28 @@ function Profile() {
       </div>
 
       <div className="favorite-radios">
-        <h1>My Collection</h1>
-        <br></br>
-        <br></br>
-        <br></br>
-        {profile &&
-          profile.favoriteRadios.map((radio) => {
-            return (
-              <>
-                <Link to={`/radio/${radio.name}`}>
-                  <div className="station">
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
-                    <br />
+        <h1 className="favorite-radios-title">
+          <span>My</span>
+          <br/>
+          Collection
+        </h1>
+
+        <div className="favorite-radios-list">
+          {
+            profile &&
+            profile.favoriteRadios.map((radio) => {
+              return (
+                <div className="station">
+                  <Link to={`/radio/${radio.name}`}>
+                    <br/>
                     <h3 className="radio-name">{radio.name}</h3>
-                  </div>
-                </Link>
-              </>
-            );
-          })}
+                  </Link>
+                </div>
+              );
+            })
+          }
+        </div>
+
       </div>
     </div>
   );

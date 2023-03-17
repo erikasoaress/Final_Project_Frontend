@@ -53,17 +53,17 @@
   padding: 20px 50px;
   z-index: 1;
 
-  background-color: orange;
+  background-color: #FC7B04;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, .35);
 }
 
 .favorite-radios {
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(7, 4, 4, 0.8);
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 50px;
-  width: 30%;
+  padding: 20px 30px;
+  flex-grow:1;
   color: yellow;
   line-height: 5px;
 }
@@ -73,35 +73,59 @@
   height: 100%;
 }
 
-
- h1 {
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  
-}
-
 a {
   color: black;
 }
 
 .station {
-  background-color: orange;
   border-radius: 50px;
-  width: 500px;
+  width: 400px;
   height: 50px;
   line-height: 0px;
-  margin-top: 20px;
   margin-left: -100px;
-  color: black;
+  margin-bottom: 20px;
   justify-content: space-around;
-
-  background-color:  orange;
+  
+  color: black;
+  background-color: #F0C3D2;
 
   border-top-right-radius: 200px;
   border-bottom-right-radius: 200px;
+
+  transition: width .2s;
+}
+
+.station:hover {
+    width: 450px;
+}
+
+.station:nth-child(2n) {
+    background-color: #00FFA3;
+}
+
+.station:nth-child(3n) {
+    background-color: #FFF502;
+}
+
+.station:nth-child(4n) {
+    background-color: #FC7B04;
 }
 
 .station h3 {
     color:black;
     
+}
+
+.favorite-radios-title {
+    text-align: left;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 38px;
+    white-space: break-spaces;
+    color:white;
+}
+
+.favorite-radios-title span {
+    font-size: 28px;
+    font-weight: normal;
 }

@@ -30,11 +30,11 @@ function Review(props) {
   };
 
   return (
-    <div>
+    <div className='reviews'>
       <form className="form-reviews" onSubmit={handleSubmit}>
         <label>
-          Enjoying this radio? 
-          <input className="input-reviews"type="text" value={reviews} onChange={handleReview} />
+          
+          <input className="input-reviews"type="text" placeholder="Write a comment" value={reviews} onChange={handleReview} />
         </label>
         <button className="review-button"type="submit">Send review</button>
       </form>

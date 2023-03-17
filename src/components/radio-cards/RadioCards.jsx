@@ -23,7 +23,6 @@ function RadioCards({radio}) {
             {!radio.name || radio.name === "" ? "Unknown name" : radio.name}
           </h3>
 
-          <Link className="link-radio-detail"to={`/radio/${radio.name}`}> See more</Link>
           <p>
             {!radio.country || radio.country === ""
               ? "Unknown country"
@@ -31,18 +30,27 @@ function RadioCards({radio}) {
           </p>
         </div>
 
-        <button
-          onClick={() =>
-            play(
-              radio.name,
-              radio.url,
-              radio.favicon || radio.img || "/radio.jpg"
-            )
-          }
-          className="card-button"
-        >
-          Play radio
-        </button>
+        <div className="card-actions">
+          <Link
+            className="card-button"
+            to={`/radio/${radio.name}`}
+          >
+            See more
+          </Link>
+
+          <button
+            onClick={() =>
+              play(
+                radio.name,
+                radio.url,
+                radio.favicon || radio.img || "/radio.jpg"
+              )
+            }
+            className="card-button play-button"
+          >
+            Play radio
+          </button>
+        </div>
       </div>
     );
 

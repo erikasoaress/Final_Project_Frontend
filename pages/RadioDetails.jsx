@@ -4,8 +4,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import Review from "./review/Review";
 import "./radio-details.css";
 import { AuthContext } from "../src/context/auth.context";
+import { PlayerContext } from "../src/context/player.context";
 
 function RadioDetails() {
+  const { play } = useContext(PlayerContext);
   const [radio, setRadio] = useState(null);
   const { radioName } = useParams();
   const [updated, setUpdated] = useState(true);
@@ -23,7 +25,7 @@ function RadioDetails() {
           }}
       );
       setRadio(response.data);
-      /* console.log(response.data); */
+      console.log(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -38,8 +40,6 @@ function RadioDetails() {
             Authorization: `Bearer ${storedToken}`,
           }}
       );
-      /* console.log(radio._id);
-      console.log(response); */
       setUpdated(response.data)
       navigate(`/profile/${user._id}`);
     } catch (error) {
@@ -57,32 +57,41 @@ function RadioDetails() {
   }, [updated]);
 
   return (
-    <div>
-      <img className="door-radio-details" src="/door-radio-details.png" />
-      <div className="info-radio-details">
-        {radio && (
-          <>
-            <h3>{radio.name}</h3>
-            <img src={radio.img} />
-            <p>{radio.country}</p>
-            <Review thisRadio={radio} setUpdated={setUpdated} />
-            <button className="favorites-button" onClick={addFavorite}>
-              Add to Favorites
-            </button>
-          </>
-        )}
-      </div>
+    <div className="radio-page">
+      {radio && (
+        <div className="info-radio-details">
+          <h3>{radio.name}</h3>
+          <img className="info-radio-image" src={radio.img} />
+          <p>{radio.country}</p>
+
+          <button className="favorites-button" onClick={addFavorite}>
+            Add to Favorites
+          </button>
+          <button
+            onClick={() =>
+              play(
+                radio.name,
+                radio.url,
+                radio.favicon || radio.img || "/radio.jpg"
+              )
+            }
+            className="favorites-button"
+          >
+            Play
+          </button>
+        </div>
+      )}
 
       <div className="comments-container">
+        <h3 className="comments-container-title">Enjoying this radio? </h3>
+
+        <Review thisRadio={radio} setUpdated={setUpdated} />
         <div className="comments">
           {radio &&
             radio.reviews.map((review) => {
               return (
                 <p>
-                  <img
-                    className="star"
-                    src="/star.png"
-                  ></img>
+                  <img className="star" src="/star.png"></img>
                   {review.comment}
                 </p>
               );
